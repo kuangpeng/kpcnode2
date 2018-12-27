@@ -1,0 +1,126 @@
+/** main.css*/
+
+/**/
+.mt10{
+    margin-top: 10px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+/**/
+.f12{
+    font-size: 12px;
+}
+.f14{
+    font-size: 14px;
+}
+.f16{
+    font-size: 16px;
+}
+/**/
+img.img-rounded{
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/* media css */
+.media, 
+.media-body{
+    overflow: hidden;
+    zoom: 1;
+}
+.media-body, .media-left, .media-right{
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media>.pull-left{
+    padding-right: 10px;
+}
+.media-right, .media>.pull-right{
+    padding-left: 10px;
+}
+.media-object{
+    display: block;
+}
+.media-body{
+    width: 10000px;
+}
+/***/
+
+/** news content and comment html style ***/
+.markdown-text{
+    color: #333;
+}
+.markdown-text a{
+    color: #08c;
+}
+.markdown-text p,
+.preview p {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.5;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.markdown-text>:last-child,.preview>:last-child,textarea#title {
+    margin-bottom: 5px
+}
+
+.markdown-text>:first-child,.preview>:first-child {
+    margin-top: 0
+}
+
+.markdown-text li,.preview li {
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.markdown-text li code,.markdown-text p code,.preview li code,.preview p code {
+    color: #000;
+    background-color: #fcfafa;
+    padding: 4px 6px
+}
+
+.markdown-text img {
+    max-width: 100%;
+    cursor: pointer
+}
+
+.markdown-text h1 code,.markdown-text h2 code,.markdown-text h3 code,.markdown-text h4 code,.markdown-text h5 code,.markdown-text h6 code {
+    font-size: inherit;
+    color: inherit
+}
+/**/
