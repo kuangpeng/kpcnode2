@@ -97,16 +97,16 @@ export default {
             });
         },
         resetScroll: function(){
-            //debugger
-            var hash = window.location.hash.slice(1);
-            var scrollMap = JSON.parse(localStorage.getItem('scrollMap'));
+            //TODO:
+            // var hash = window.location.hash.slice(1);
+            // var scrollMap = JSON.parse(localStorage.getItem('scrollMap'));
 
-            let path = hash.replace(/\//g, '$');
-            if(scrollMap[path]){
-                document.documentElement.scrollTop = scrollMap[path];
-                window.pageYOffset = scrollMap[path];
-                document.body.scrollTop = scrollMap[path];
-            }
+            // let path = hash.replace(/\//g, '$');
+            // if(scrollMap[path]){
+            //     document.documentElement.scrollTop = scrollMap[path];
+            //     window.pageYOffset = scrollMap[path];
+            //     document.body.scrollTop = scrollMap[path];
+            // }
         }
     },
     watch: {
