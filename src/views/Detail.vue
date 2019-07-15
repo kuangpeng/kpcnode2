@@ -170,8 +170,40 @@ export default {
     padding: 10px;
 }
 
+.detail_content{
+    white-space: normal;
+    word-break: break-all;
+}
 .detail_content a{
     text-decoration: underline;
+}
+
+.markdown-text p, .preview p {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 2em;
+    margin: 1em 0;
+}
+
+pre.prettyprint {
+    font-size: 14px;
+    border-radius: 0;
+    padding: 0 15px;
+    border: none;
+    margin: 20px -10px;
+    border-width: 1px 0;
+    background: #f7f7f7;
+    -o-tab-size: 4;
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+pre code {
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
 }
 
 </style>
