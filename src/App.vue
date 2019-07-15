@@ -23,18 +23,13 @@ export default {
     },
     watch: {
         $route(to, from){
-            let isBack = this.$router.isBack;
-            if(isBack) {
-　　　　　　     //this.transitionName = 'slide-right'
-            } else {
-　　    　　　　 //this.transitionName = 'slide-left'
-            }
-        　　//this.$router.isBack = false;
 
             var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
             let path = from.path.replace(/\//g, '$');
-            this.scrollMap[path] = scrollTop;
-            localStorage.setItem("scrollMap", JSON.stringify(this.scrollMap));
+            if(from.meta.keepAlive){
+                this.scrollMap[path] = scrollTop;
+                localStorage.setItem("scrollMap", JSON.stringify(this.scrollMap));
+            }
         }
     },
     updated: function(){
@@ -42,10 +37,15 @@ export default {
         var scrollMap = JSON.parse(localStorage.getItem('scrollMap'));
 
         let path = hash.replace(/\//g, '$');
-        if(scrollMap[path] && this.$route.meta.keepAlive){
+        if(scrollMap && scrollMap[path] && this.$route.meta.keepAlive){
             document.documentElement.scrollTop = scrollMap[path];
             window.pageYOffset = scrollMap[path];
             document.body.scrollTop = scrollMap[path];
+        }
+        else{
+            document.documentElement.scrollTop = 0
+            window.pageYOffset = 0
+            document.body.scrollTop = 0
         }
     },
     beforeRouteLeave(to, from, next) {
